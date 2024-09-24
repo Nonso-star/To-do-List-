@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+}    
+.todo-container {
+    
+    width: 100%;
+    height: 800px;
+    display: flex;
+    padding: 25px 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-container {
+    display: flex;
+    width: 100%;
+    height: 974px;
+    margin-top: 230px;
+    padding: 37px 456px 610px 455px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(20px);
+}
+
+.text-container {
+    display: flex;
+    width: 612px;
+    height: 77px;
+    padding: 10px 36px;
+    margin-top: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    background: #1E1E1E;
+}
+
+.text{
+    color: white;
+    font-family: "Bricolage Grotesque";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.list-container {
+    width: 100%;
+    padding: 40px 19px 35px 19px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(25px);
+   
+}
+
+h2 {
+    width: 400px;
+    margin-top: 30px;
+    margin-left: 18px;
+    color: #FFF;
+    font-family: "Bricolage Grotesque";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+input{
+    width: 412px;
+    height: 49px;
+    margin: 20px;
+    padding: 10px 10px 10px 17px;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.20);
+}
+
+button {
+
+   width: 107px;
+   height: 49px;
+   padding: 10px;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  color: white;
+  background: #1E1E1E;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Color change on hover */
+  }
+  
+button:active {
+    transform: scale(0.95); /* Slightly shrink the button on press */
+  }
+
+  ul li{
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 16px;
+   color: white;
+   font-family: "Bricolage Grotesque";
+   display: flex;
+   align-items: center;  /* Align text and icon vertically */
+   justify-content: space-between; /* Ensure space between text and cancel icon */
+   width: 375px;
+   height: 49px;
+   padding: 10px 10px 10px 50px; /* Add left padding to accommodate the icon */
+   gap: 10px;
+   flex-shrink: 0;
+   position: relative;
+}
+
+ul li::before {
+content: '';
+  position: absolute;
+  left: 10px;  /* Position the icon from the left */
+  top: 50%;  /* Position the icon vertically in the center */
+  transform: translateY(-50%);  /* Adjust for exact vertical centering */
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-image: url(images/check\ box.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/checkmark-square-01.svg);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+  background: #ffffff;
+}
+
